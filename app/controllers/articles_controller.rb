@@ -10,6 +10,7 @@ class ArticlesController < ApplicationController
   end
   
   def create 
+    #can user debugger to stop server while running
     #render plain: params[:artcle].inspect
     @article = Article.new(article_params)
     @article.user = Users.first
