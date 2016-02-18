@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
     #can user debugger to stop server while running
     #render plain: params[:artcle].inspect
     @article = Article.new(article_params)
-    @article.user = Users.first
+    @article.user = User.first
     if @article.save
       flash[:success] = "Article was created"
       redirect_to article_path(@article)
